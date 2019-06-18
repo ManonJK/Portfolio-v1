@@ -9,7 +9,7 @@
                     <div class="dropdown">
                         <button class="dropbtn"><a href="propos.php">A propos</a></button>
                         <div class="dropdown-content">
-                            <a href="#">Curriculum Vitae</a>
+                            <a href="CV_FR.pdf" target="_blank">Curriculum Vitae</a>
                             <a href="competences">Compétences</a>
                             <a href="contact.php">Contact</a>
                         </div>

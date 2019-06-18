@@ -92,3 +92,8 @@ ul{
     display: flex;
     margin: 20px 20px 0 20px;
 }
+
+@font-face {
+    font-family: 'Alaska';
+    src: url('Alaska_Font.ttf');
+}
