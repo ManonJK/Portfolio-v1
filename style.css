@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html, body, main{
+    margin : 0;
+    width: 100%;
+    height: 100%;
+    /*background-image: url("images/fond.jpg");
+    background-size: cover;*/
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: normal;
+    display : flex;
+    flex-direction: column;
+}
+
+main{
+    flex-direction: row;
+    padding-top: 4%;
+}
+
+.maincolonne{
+    flex-direction: column;
+}
+
+header{
+    background-color: white;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+h1{
+    font-weight: normal;
+}
+
+h1 span{
+    text-transform: uppercase;
+}
+
+.button01 {
+    margin: 0px 40px 0px 40px;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 0px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    line-height: 46px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(to right, black 0%, #303030 100%), radial-gradient(circle at top left, black, #303030);
+    border: double 2px transparent;
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.button01:hover {
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, black, #303030);
+    border: 2px solid black;
+    color: black;
+    box-shadow: none;
+    background-clip: border-box;
+}
+
+.contenu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.contenu img{
+    width: 35%;
+    /*height: 50%;*/
+    margin: 10px;
+    text-align: justify;
+}
+
+.categoriecomp{
+    padding: 50px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mescompenligne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.mycompetences{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width : auto;
+    filter: grayscale(100%);
+    transition: all 0.5s ease-out;
+    align-items: center;
+}
+
+.mycompetences:hover{
+    transform: scale(1.3);
+    filter: grayscale(0%);
+}
+
+.mycompetences img{
+    height: 200px;
+    width: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.montexte{
+    margin: 10px;
+}
+
+#colonne{
+    /*border : 1px solid yellow;
+    margin-top: 30px;*/
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#gauche{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+#gauche div, h1{
+    text-align: center;
+}
+
+#gaucheport{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    display: table;
+}
+
+#h1port{
+    font-weight: normal;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#droiteport{
+    padding: 0 20px 0 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+#fond{
+    background-image: url("images/fond.jpg");
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -3;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#justifie{
+    text-align: right;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #B02E4E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    width: auto;
+}
+
+input[type=submit]:hover {
+    background-color: #661B2E;
+}
+
+.container {
+    background-color: transparent;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5%;
+    justify-content: center;
+}
+
+form p{
+    font-size: 0.8em;
+    align-self: flex-end;
+}
