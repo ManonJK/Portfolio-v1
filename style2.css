@@ -1,4 +1,14 @@
+/*Des borders seront utilisés pour les vérifications, puis laissés commentés paar la suite*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: "Alaska";
+    src: url("Alaska_Font.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body{
     display: flex;
@@ -7,9 +17,69 @@ body{
     align-items: center;
     margin: 0;
     padding: 0;
-    /*color: white;*/
     font-family: 'Montserrat', 'sans-serif';
     font-weight: normal;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: left;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5%;
+    justify-content: center;
+}
+
+form p{
+    font-size: 0.8em;
+    align-self: flex-end;
+}
+
+header {
+    display: flex!important;
+    width: 100%;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    font-weight: normal;
+    margin: 30px;
+}
+
+h1 span{
+    text-transform: uppercase;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #B02E4E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    width: auto;
+}
+
+input[type=submit]:hover {
+    background-color: #661B2E;
 }
 
 main{
@@ -19,26 +89,72 @@ main{
     justify-content: center;
     text-align: center;
     width: 100%;
+    height: 100%;
 }
 
-.maincolonne{
+#colonne{
+    /*border : 1px solid yellow;
+    margin-top: 30px;*/
+    display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
-header{
-    background-color: white;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    position: fixed;
+#droiteport{
+    padding: 0 20px 0 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
 }
 
-h1{
+#gauche{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    align-self: flex-start;
+}
+
+#gauche div, h1{
+    text-align: center;
+}
+
+#gaucheport{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    display: table;
+}
+
+#h1port{
     font-weight: normal;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-h1 span{
-    text-transform: uppercase;
+#justifie{
+    text-align: right;
+}
+
+
+#sticky{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 100%;
+    /*text-transform: uppercase;*/
+}
+
+.bg {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .button01 {
@@ -70,6 +186,38 @@ h1 span{
     background-clip: border-box;
 }
 
+.categoriecomp{
+    padding: 50px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card{
+    width: 277px;
+    height: fit-content;
+}
+
+.card-deck{
+    margin-bottom: 20px;
+}
+
+.card-body h2{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-body p{
+    font-size: 0.8em;
+}
+
+.card-img-top{
+    border-bottom: 1px solid darkgray;
+}
+
 .contenu{
     display: flex;
     flex-direction: row;
@@ -79,19 +227,31 @@ h1 span{
 }
 
 .contenu img{
-    width: 35%;
-    /*height: 50%;*/
+    width: 25%;
+    height: auto;
     margin: 10px;
     text-align: justify;
 }
 
-.categoriecomp{
-    padding: 50px 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.container {
+    background-color: transparent;
+    width: 100%;
+}
+
+.fond{
+    background-image: url("images/fond.jpg");
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -3;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.height{
+    height: 100%;
 }
 
 .mescompenligne{
@@ -99,6 +259,13 @@ h1 span{
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.montexte{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-self: flex-start;
 }
 
 .mycompetences{
@@ -123,120 +290,21 @@ h1 span{
     border-style: none;
 }
 
-.montexte{
-    margin: 10px;
-}
-
-#colonne{
-    /*border : 1px solid yellow;
-    margin-top: 30px;*/
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-#gauche{
-    background-color: rgba(255, 255, 255, 0.7);
+.row{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.taille50{
     width: 50%;
-    height: 100%;
-    align-items: center;
 }
 
-#gauche div, h1{
-    text-align: center;
-}
-
-#gaucheport{
-    width: 40%;
-    height: 100%;
-    text-align: center;
-    display: table;
-}
-
-#h1port{
-    font-weight: normal;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#droiteport{
-    padding: 0 20px 0 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100%;
-    align-items: center;
-}
-
-#fond{
-    background-image: url("images/fond.jpg");
-    background-size: cover;
-    opacity: 0.8;
-    z-index: -3;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#justifie{
-    text-align: right;
-}
-
-input[type=text], input[type=email], input[type=tel], select, textarea {
+.taille50 img{
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
 }
 
-input[type=submit] {
-    background-color: #B02E4E;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    align-self: flex-end;
-    width: auto;
-}
 
-input[type=submit]:hover {
-    background-color: #661B2E;
-}
-
-.container {
-    background-color: transparent;
-}
-
-form{
-    display: flex;
-    flex-direction: row;
-    color: white;
-}
-
-form div{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 5%;
-    justify-content: center;
-}
-
-form p{
-    font-size: 0.8em;
-    align-self: flex-end;
-}
 
 /***************************Ici le css de ma nav***************************/
 
@@ -303,7 +371,6 @@ nav{
     width: 100%;
     z-index: 999;
     box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
 nav ul li{
@@ -343,9 +410,4 @@ ul{
 #sticky{
     display: flex;
     margin: 20px 20px 0 20px;
-}
-
-@font-face {
-    font-family: 'Alaska';
-    src: url('Alaska_Font.ttf');
 }

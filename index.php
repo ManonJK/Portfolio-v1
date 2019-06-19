@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="height">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="style2.css">
+    <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Accueil</title>
 </head>
-<body>
+<body class="height">
 
 <header>
     <?php
@@ -16,7 +16,7 @@
 
 <main>
 
-    <div id="fond"></div>
+    <div class="fond"></div>
 
     <div id="gauche">
         <div id="contenu">

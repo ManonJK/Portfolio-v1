@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="nav/nav.css">
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="nav/nav.css">-->
+    <link rel="stylesheet" href="style2.css">
     <title>Compétences</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 
 <main class="maincolonne">
 
-    <div id="fond"></div>
+    <div class="fond"></div>
     <h1>Découvrez mes <span><strong>compétences</strong></span></h1>
 
     <div class="categoriecomp">

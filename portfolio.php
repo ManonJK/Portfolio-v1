@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="height">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="style2.css">
+    <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Portfolio</title>
 </head>
-<body>
+<body class="height">
 
 <header>
     <?php
@@ -14,8 +14,9 @@
     ?>
 </header>
 
-<main>
-    <div id="fond"></div>
+<main class="row">
+
+    <div class="fond"></div>
 
     <div id="gaucheport">
         <h1 id="h1port"><strong>Portfolio</strong></h1>
@@ -30,7 +31,7 @@
                     le développement de jeux de Casio en Tkinter. En groupe de 3, nous avons su nous organiser et travailler
                     de façon parallèle afin d'être efficaces.</p>
             </div>
-            <img src="images/image.jpg" alt="Image du mini projet python tkinter">
+            <img src="images/jeu_python.png" alt="Image du jeu Caverns Of Thora du mini projet python">
         </div>
 
         <div class="contenu">

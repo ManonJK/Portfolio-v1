@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="propos.css">
+    <link rel="stylesheet" href="style2.css">
     <title>A propos</title>
 </head>
 <body>
@@ -14,6 +14,8 @@
 </header>
 
 <main>
+
+    <div class="fond"></div>
 
     <div id="gauche">
         <img src="images/photo.jpg" alt="Photo de moi"/>
