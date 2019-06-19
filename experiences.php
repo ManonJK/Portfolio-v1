@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style2.css">
+    <meta name="description" content="Retrouvez chacune de mes expériences professionnelles"/>
+    <link rel="stylesheet" href="style.css">
     <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Expériences</title>
 </head>
@@ -10,7 +11,7 @@
 
 <header>
     <?php
-    include ('nav/nav.php');
+    include ('nav.php');
     ?>
 </header>
 

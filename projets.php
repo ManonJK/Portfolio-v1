@@ -2,16 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Retrouvez l'ensemble de mes projets : site cv, plante connectée, projet infrastructure réseau, etc"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <!--<link rel="stylesheet" href="nav/nav.css">-->
-    <title>Projets</title>
+    <title>Manon JULIEN KUENTZ - Projets</title>
 </head>
 <body>
 
 <header>
     <?php
-    include ('nav/nav.php');
+    include ('nav.php');
     ?>
 </header>
 

@@ -2,15 +2,16 @@
 <html lang="fr" class="height">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style2.css">
+    <meta name="description" content="Retrouvez mon Portfolio, avec mes projets ainsi que mes expériences"/>
+    <link rel="stylesheet" href="style.css">
     <!--<link rel="stylesheet" href="nav/nav.css">-->
-    <title>Portfolio</title>
+    <title>Manon JULIEN KUENTZ - Portfolio</title>
 </head>
 <body class="height">
 
 <header>
     <?php
-    include ('nav/nav.php');
+    include ('nav.php');
     ?>
 </header>
 
@@ -45,8 +46,8 @@
 
         <div id="colonne">
             <div class="contenu">
-                <button class="button01" type="button" onclick="window.location.href='#'" target="_blank">Expériences</button>
-                <button class="button01" type="button" onclick="window.location.href='#'" target="_blank">Projets</button>
+                <button class="button01" type="button" onclick="window.location.href='experiences.php'" target="_blank">Expériences</button>
+                <button class="button01" type="button" onclick="window.location.href='projets.php'" target="_blank">Projets</button>
             </div>
         </div>
 

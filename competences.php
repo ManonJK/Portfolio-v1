@@ -2,16 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Retrouvez toutes mes compétences ainsi que mes certifications"/>
     <!--<link rel="stylesheet" href="nav/nav.css">-->
-    <link rel="stylesheet" href="style2.css">
-    <title>Compétences</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Manon JULIEN KUENTZ - Compétences</title>
 </head>
 <body>
 
 
 <header>
     <?php
-    include ('nav/nav.php');
+    include ('nav.php');
     ?>
 </header>
 

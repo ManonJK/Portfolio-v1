@@ -1,4 +1,14 @@
+/*Des borders seront utilisés pour les vérifications, puis laissés commentés paar la suite*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: "Alaska";
+    src: url("Alaska_Font.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body{
     display: flex;
@@ -7,186 +17,43 @@ body{
     align-items: center;
     margin: 0;
     padding: 0;
-    /*color: white;*/
     font-family: 'Montserrat', 'sans-serif';
     font-weight: normal;
 }
 
-main{
+form{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: left;
+}
+
+form div{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 50%;
+    margin: 5%;
     justify-content: center;
-    text-align: center;
-    width: 100%;
 }
 
-.maincolonne{
-    flex-direction: column;
+form p{
+    font-size: 0.8em;
+    align-self: flex-end;
 }
 
-header{
-    background-color: white;
-    z-index: 1000;
-    top: 0;
+header {
+    display: flex!important;
     width: 100%;
-    position: fixed;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
 }
 
 h1{
     font-weight: normal;
+    margin: 30px;
 }
 
 h1 span{
     text-transform: uppercase;
-}
-
-.button01 {
-    margin: 0px 40px 0px 40px;
-    display: inline-block;
-    color: #fff;
-    letter-spacing: 0px;
-    font-family: "Rubik", sans-serif;
-    font-weight: 500;
-    line-height: 46px;
-    outline: none !important;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    background-image: linear-gradient(to right, black 0%, #303030 100%), radial-gradient(circle at top left, black, #303030);
-    border: double 2px transparent;
-    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
-    transition: all 0.3s ease-in-out;
-}
-
-.button01:hover {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, black, #303030);
-    border: 2px solid black;
-    color: black;
-    box-shadow: none;
-    background-clip: border-box;
-}
-
-.contenu{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-.contenu img{
-    width: 35%;
-    /*height: 50%;*/
-    margin: 10px;
-    text-align: justify;
-}
-
-.categoriecomp{
-    padding: 50px 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.mescompenligne{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.mycompetences{
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width : auto;
-    filter: grayscale(100%);
-    transition: all 0.5s ease-out;
-    align-items: center;
-}
-
-.mycompetences:hover{
-    transform: scale(1.3);
-    filter: grayscale(0%);
-}
-
-.mycompetences img{
-    height: 200px;
-    width: auto;
-    vertical-align: middle;
-    border-style: none;
-}
-
-.montexte{
-    margin: 10px;
-}
-
-#colonne{
-    /*border : 1px solid yellow;
-    margin-top: 30px;*/
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-#gauche{
-    background-color: rgba(255, 255, 255, 0.7);
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
-    align-items: center;
-}
-
-#gauche div, h1{
-    text-align: center;
-}
-
-#gaucheport{
-    width: 40%;
-    height: 100%;
-    text-align: center;
-    display: table;
-}
-
-#h1port{
-    font-weight: normal;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#droiteport{
-    padding: 0 20px 0 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100%;
-    align-items: center;
-}
-
-#fond{
-    background-image: url("images/fond.jpg");
-    background-size: cover;
-    opacity: 0.8;
-    z-index: -3;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#justifie{
-    text-align: right;
 }
 
 input[type=text], input[type=email], input[type=tel], select, textarea {
@@ -215,28 +82,309 @@ input[type=submit]:hover {
     background-color: #661B2E;
 }
 
-.container {
-    background-color: transparent;
-}
-
-form{
-    display: flex;
-    flex-direction: row;
-    color: white;
-}
-
-form div{
+main{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#colonne{
+    /*border : 1px solid yellow;
+    margin-top: 30px;*/
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#droiteport{
+    padding: 0 20px 0 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+#gauche{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: row;
     width: 50%;
-    margin: 5%;
+    height: 100%;
+    align-items: center;
+    align-self: flex-start;
+}
+
+#gauche div, h1{
+    text-align: center;
+}
+
+#gaucheport{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    display: table;
+}
+
+#h1port{
+    font-weight: normal;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#height60{
+    width: 60%;
+}
+
+#justifie{
+    text-align: right;
+}
+
+#mes_reseaux{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin : 10px 0;
+}
+
+#sticky{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 100%;
+    /*text-transform: uppercase;*/
+}
+
+#textepropos{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: flex-start;
+}
+
+#textepropos h1{
+    margin: 0;
+}
+
+#width100{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.bg {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.bgwhite{
+    background-color: rgba(255,255,255, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.button01 {
+    margin: 0px 40px 0px 40px;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 0px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    line-height: 46px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(to right, black 0%, #303030 100%), radial-gradient(circle at top left, black, #303030);
+    border: double 2px transparent;
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.3s ease-in-out;
+    width: 120px;
+    height: 55px;
+}
+
+.button01:hover {
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, black, #303030);
+    border: 2px solid black;
+    color: black;
+    box-shadow: none;
+    background-clip: border-box;
+}
+
+.categoriecomp{
+    padding: 50px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card{
+    width: 277px;
+    height: fit-content;
+    margin-right: 70px!important;
+    margin-left: 70px!important;
+}
+
+.card-deck{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.card-body{
+    height: 185px;
+    overflow: auto;
+}
+
+.card-body h2{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-body p{
+    font-size: 0.8em;
+}
+
+.card-img-top{
+    border-bottom: 1px solid darkgray;
+}
+
+.colonne{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+   /* height: 100%;*/
     justify-content: center;
 }
 
-form p{
-    font-size: 0.8em;
-    align-self: flex-end;
+.contenu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }
+
+.contenu img{
+    width: 25%;
+    height: auto;
+    margin: 10px;
+    text-align: justify;
+}
+
+.container {
+    background-color: transparent;
+    width: 100%;
+}
+
+.fab{
+    color: #B02E4E;
+    margin: 0 10px;
+}
+
+.fab:hover{
+    color: #661B2E;
+}
+
+.fond{
+    background-image: url("images/fond.jpg");
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -3;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.height{
+    height: 100%;
+}
+
+.margin20{
+    padding-bottom: 20px;
+    flex-grow: 7;
+}
+
+.margin20 img{
+    width: 200px;
+    border-radius : 50%;
+}
+
+.mes_boutons{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.mescompenligne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.montexte{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-self: flex-start;
+    text-align: start;
+}
+
+.mycompetences{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width : auto;
+    filter: grayscale(100%);
+    transition: all 0.5s ease-out;
+    align-items: center;
+}
+
+.mycompetences:hover{
+    transform: scale(1.3);
+    filter: grayscale(0%);
+}
+
+.mycompetences img{
+    height: 200px;
+    width: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.taille50{
+    width: 50%;
+}
+
+.taille50 img{
+    width: 100%;
+}
+
+
 
 /***************************Ici le css de ma nav***************************/
 
@@ -303,7 +451,6 @@ nav{
     width: 100%;
     z-index: 999;
     box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
 nav ul li{
@@ -343,9 +490,4 @@ ul{
 #sticky{
     display: flex;
     margin: 20px 20px 0 20px;
-}
-
-@font-face {
-    font-family: 'Alaska';
-    src: url('Alaska_Font.ttf');
 }

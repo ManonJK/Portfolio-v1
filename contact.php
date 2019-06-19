@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Contact</title>
 </head>
@@ -10,7 +10,7 @@
 
 <header>
     <?php
-    include ('nav/nav.php');
+    include ('nav.php');
     ?>
 </header>
 

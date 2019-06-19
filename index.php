@@ -2,15 +2,16 @@
 <html lang="fr" class="height">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style2.css">
+    <meta name="description" content="Bienvenue sur mon site CV. Retrouvez toutes les informations me concernant, Manon JULIEN KUENTZ"/>
+    <link rel="stylesheet" href="style.css">
     <!--<link rel="stylesheet" href="nav/nav.css">-->
-    <title>Accueil</title>
+    <title>Manon JULIEN KUENTZ - Accueil</title>
 </head>
 <body class="height">
 
 <header>
     <?php
-    include ('nav/nav.php');
+    include ('nav.php');
     ?>
 </header>
 
@@ -27,7 +28,7 @@
             </div>
 
             <div>
-                <button class="button01" type="button" onclick="window.location.href='#'" target="_blank">A propos</button>
+                <button class="button01" type="button" onclick="window.location.href='propos.php'" target="_blank">A propos</button>
                 <button class="button01" type="button" onclick="window.location.href='portfolio.php'" target="_blank">Portfolio</button>
             </div>
         </div>
