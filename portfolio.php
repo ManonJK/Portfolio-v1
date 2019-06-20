@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Retrouvez mon Portfolio, avec mes projets ainsi que mes expériences"/>
+    <meta name="keywords" content="Projets, Python, Jeu Web, Chef de projet"/>
     <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Manon JULIEN KUENTZ - Portfolio</title>
 </head>
 <body class="height">

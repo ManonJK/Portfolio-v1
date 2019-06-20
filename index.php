@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Bienvenue sur mon site CV. Retrouvez toutes les informations me concernant, Manon JULIEN KUENTZ"/>
+    <meta name="keywords" content="Accueil, Développement, Etudiante, Portfolio, Web, Informatique, Présentation"/>
     <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Manon JULIEN KUENTZ - Accueil</title>
 </head>
 <body class="height">

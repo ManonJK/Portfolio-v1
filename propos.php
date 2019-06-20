@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Découvrez qui je suis et suivez-moi sur mes réseaux sociaux"/>
+    <meta name="keywords" content="Compétences, Contact, CV, Portfolio, Chef de projet, Scientifique, Informatique, Passions, curieuse, intéressée, motivée, patiente, travailler en équipe"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Manon JULIEN KUENTZ - A propos</title>

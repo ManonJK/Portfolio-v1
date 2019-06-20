@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Retrouvez chacune de mes expériences professionnelles"/>
+    <meta name="keywords" content="Stages, Startup, Workshop, équipe, compétition, Equipe aléatoire, problématiques d'entreprises"/>
     <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="nav/nav.css">-->
     <title>Expériences</title>
 </head>
 <body>

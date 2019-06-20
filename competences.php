@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Retrouvez toutes mes compétences ainsi que mes certifications"/>
-    <!--<link rel="stylesheet" href="nav/nav.css">-->
+    <meta name="keywords" content="Compétences, Développement, Web, HTML, CSS, JS, Python, PHP, CCNA1, Langage C"/>
     <link rel="stylesheet" href="style.css">
     <title>Manon JULIEN KUENTZ - Compétences</title>
 </head>
