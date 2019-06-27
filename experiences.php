@@ -1,11 +1,34 @@
+<?php
+//sous-fichier qui permet d'afficher les compétences de chacun
+/*
+    if(!isset($_SESSION['user_name'])) {
+        exit();
+    }
+*/
+header( 'content-type: text/html; charset=utf-8' );
+require_once('db.php');
+/*
+    $user_name = $_SESSION['user_name'];
+    $user_id = $_SESSION['user_id'];*/
+$rqtP = "SELECT * FROM experiences_pro";
+
+try {
+    $stmt = $pdo->prepare($rqtP);
+    $stmt->execute();
+} catch(Exception $e) {
+    $e->getMessage();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="description" content="Retrouvez chacune de mes expériences professionnelles"/>
     <meta name="keywords" content="Stages, Startup, Workshop, équipe, compétition, Equipe aléatoire, problématiques d'entreprises"/>
     <link rel="stylesheet" href="style.css">
-    <title>Expériences</title>
+    <title>Manon JULIEN KUENTZ - Expériences</title>
 </head>
 <body>
 
@@ -24,37 +47,28 @@
     </div>
 
     <div class="bg taille50">
-        <div class="contenu">
-            <div class="taille50">
-                <img src="images/image.jpg" alt="">
-            </div>
-            <div class="montexte taille50">
-                <h2>Mon année de Startup</h2>
-                <p>Durant cette année, nous avons été mélangé à des étudiants venant d'autres filières,
-                et de différents niveau d'étude afin de réaliser un projet commun.
-                    La <strong>startup</strong> dans laquelle j'ai été embauchée est le Hacking Challenge. Notre projet
-                était de pirater une onde radio. Malheureusement, le matériel dont nous disposions n'a pas été adapté
-                    et nous avons eu de nombreux problèmes d'<strong>équipe</strong>. Malgré cela, nous avons pu apprendre de nos erreurs,
-                et chacun a pu se développer professionnellement dans le travail d'équipe</p>
-            </div>
-        </div>
 
-        <div class="contenu">
-            <div class="taille50">
-                <img src="images/image.jpg" alt="">
-            </div>
-            <div class="montexte taille50">
-                <h2>Les workshops 2019</h2>
-                <p>Durant cette année, nous avons pu expérimenter ce que sont les <strong>workshops</strong>. Il s'agit d'une
-                    <strong>compétition</strong> durant laquelle nous sommes en <strong>équipe aléatoire</strong> de 8 à 9 personnes de filières et niveaux différents,
-                    afin de répondre à différentes réelles <strong>problématiques d'entreprises</strong>. Cette compétition dure 2 semaines, et nous
-                devons remettre environ 3 dossiers et une présentation.</p>
-            </div>
-        </div>
+        <?php
+            while($c = $stmt->fetch(PDO::FETCH_ASSOC)){
+                echo "<div class='contenu'>";
+                echo "<div class='taille50'>";
+                echo "<img src='" . $c['image'] . "' alt='" . $c['alt'] . "' />";
+                echo "</div>";
+                echo "<div class='montexte taille50'>";
+                echo "<h2>" . $c['titre'] . "</h2>";
+                echo "<p class='card-text'>" . $c['contenu'] . "</p>";
+                echo "</div>";
+                echo "</div>";
+            }
+        ?>
 
 
     </div>
 </main>
+
+<?php
+include ('footer.php');
+?>
 
 </body>
 </html>

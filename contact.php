@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="N'hésitez pas à me laisser un message !"/>
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+    <title>Manon JULIEN KUENTZ - Contact</title>
 </head>
 <body>
 
@@ -50,6 +50,10 @@
     </div>
 
 </main>
+
+<?php
+include ('footer.php');
+?>
 
 </body>
 </html>

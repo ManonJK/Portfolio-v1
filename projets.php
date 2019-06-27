@@ -1,3 +1,25 @@
+<?php
+//sous-fichier qui permet d'afficher les compétences de chacun
+/*
+    if(!isset($_SESSION['user_name'])) {
+        exit();
+    }
+*/
+header( 'content-type: text/html; charset=utf-8' );
+require_once('db.php');
+/*
+    $user_name = $_SESSION['user_name'];
+    $user_id = $_SESSION['user_id'];*/
+$rqtP = "SELECT * FROM projets";
+
+try {
+    $stmt = $pdo->prepare($rqtP);
+    $stmt->execute();
+} catch(Exception $e) {
+    $e->getMessage();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,42 +46,27 @@
 
     <div class="card-deck">
 
-        <div class="card">
-            <img src="images/projet_web.png" class="card-img-top" alt="Logo du projet Site CV">
-            <div class="card-body">
-                <h2>Site CV</h2>
-                <p class="card-text">
-                    Ce projet est exactement ce que vous avez sous les yeux : mon <strong>site CV</strong>. Pour réaliser ce projet,
-                    j'ai utilisé mes compétences en référencement, ergonomie, <strong>HTML5, CSS3, Javascript, et PHP</strong>.
-                </p>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="images/plante_co.png" class="card-img-top" alt="Logo du projet Plante Connectée">
-            <div class="card-body">
-                <h2>Plante connectée</h2>
-                <p class="card-text">
-                    Durant ce projet, nous avons été en équipe de 2 personnes afin de rendre automatique l'entretien d'une plante.
-                    Ce projet s'est fait avec une carte <strong>arduino</strong> qui, reliée à différents capteurs, relève les données de la plante
-                    et contrôle les appareils connectés permettant l'entretien de cette dernière. Le <strong>langage C</strong> a donc été utilisé
-                    afin de mettre en place ce projet.
-                </p>
-            </div>
-        </div>
+        <?php
+            while($c = $stmt->fetch(PDO::FETCH_ASSOC)){
+                echo "<div class='card'>";
+                echo "<img src='" . $c['image'] . "' alt='" . $c['alt'] . "' />";
+                echo "<div class='card-body'>";
+                echo "<h2>" . $c['titre'] . "</h2>";
+                echo "<p class='card-text'>" . $c['contenu'] . "</p>";
+                echo "</div>";
+                echo "</div>";
+            }
+        ?>
 
-        <div class="card">
-            <img src="images/infra.png" class="card-img-top" alt="Logo du projet Infrastucture">
-            <div class="card-body">
-                <h2>Infrastructure réseau</h2>
-                <p class="card-text">Durant ce projet, nous avons été placés en équipe de 2 personnes
-                    afin de simuler un <strong>réseau</strong> d'entreprise. Nous avons réalisé cela sous <strong>VMWare</strong>.</p>
-            </div>
-        </div>
 
     </div>
 
 </main>
+
+<?php
+include ('footer.php');
+?>
 
 </body>
 </html>

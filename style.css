@@ -1,6 +1,11 @@
 /*Des borders seront utilisés pour les vérifications, puis laissés commentés paar la suite*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+@media all and (max-width:480px)
+{
+    
+}
+
 @font-face {
     font-family: "Alaska";
     src: url("Alaska_Font.ttf");
@@ -19,6 +24,21 @@ body{
     padding: 0;
     font-family: 'Montserrat', 'sans-serif';
     font-weight: normal;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+footer p{
+    margin: 0;
+    color: white;
 }
 
 form{
@@ -56,7 +76,7 @@ h1 span{
     text-transform: uppercase;
 }
 
-input[type=text], input[type=email], input[type=tel], select, textarea {
+input[type=text], input[type=email], input[type=tel], input[type=password] ,select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -96,6 +116,10 @@ textarea{
     height: 200px;
 }
 
+#aligncenter{
+    align-items: center;
+}
+
 #colonne{
     /*border : 1px solid yellow;
     margin-top: 30px;*/
@@ -104,6 +128,10 @@ textarea{
     flex-shrink: 1;
     padding-bottom: 15px;
     margin-bottom: 15px;
+}
+
+#deconnect{
+    justify-content: center;
 }
 
 #droiteport{
@@ -267,6 +295,12 @@ textarea{
     border-bottom: 1px solid darkgray;
 }
 
+.check{
+    color: black;
+    margin: 0;
+    justify-content: center!important;
+}
+
 .colonne{
     display: flex;
     flex-direction: column;
@@ -347,7 +381,7 @@ textarea{
 .montexte{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 30px;
     align-self: flex-start;
     text-align: start;
 }
@@ -488,7 +522,7 @@ ul{
     flex-direction: row-reverse;
     flex-grow: 1;
     /*border: 2px solid green;*/
-    backgroud-color: white;
+    background-color: white;
 }
 
 #sticky{

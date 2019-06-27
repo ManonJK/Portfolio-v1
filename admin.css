@@ -1,0 +1,190 @@
+/*Des borders seront utilisés pour les vérifications, puis laissés commentés paar la suite*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: "Alaska";
+    src: url("Alaska_Font.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: normal;
+}
+
+header {
+    display: flex!important;
+    width: 100%;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=password] ,select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-right: 1%;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #B02E4E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    width: auto;
+    margin-left: 1%;
+}
+
+input[type=submit]:hover {
+    background-color: #661B2E;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#sticky{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 100%;
+    /*text-transform: uppercase;*/
+}
+
+.height{
+    height: 100%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/***************************Ici le css de ma nav***************************/
+
+.dropbtn {
+    color: #333;
+    border: none;
+    cursor: pointer;
+    margin-left: 35px;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1em;
+    background-color: white;
+}
+
+.dropbtn a{
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1;
+    padding-top: 14%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Oswald", sans-serif;
+}
+
+.dropdown-content a:hover {background-color: #f9f9f9;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+a{
+    text-decoration: none;
+    align-self: end;
+}
+
+a:hover{
+    color: #B02E4E;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    background-color: white;
+    /* position: sticky;*/
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 35px;
+    font-family: "Rubik", "Oswald", sans-serif;
+    color: #333;
+}
+
+
+ul{
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+    margin-top: 1rem;
+}
+
+#gauchenav a{
+    /*border: 2px solid red;*/
+    color: #333;
+    font-family: "Alaska", "Oswald", sans-serif;
+    font-size: 2em;
+}
+
+#gauchenav span{
+    color: #B02E4E;
+}
+
+#liste-menu{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    /*border: 2px solid green;*/
+    background-color: white;
+}
+
+#sticky{
+    display: flex;
+    margin: 20px 20px 0 20px;
+}
