@@ -1,3 +1,22 @@
+<?php
+session_start(); #On start la session
+
+require_once('db.php'); #On fait le lien avec la bdd
+
+#requête qui nous sert à envoyer le message ainsi que les infos lorsqu'on clique sur le bouton d'envoi
+if(isset($_POST['send'])) {
+    $rqtMessage = "INSERT INTO messages(`nom`, `prenom`, `mail`, `phone`, `message`) VALUES (?, ?, ?, ?, ?)";
+    $stmtMessage = $pdo->prepare($rqtMessage);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $mail = htmlspecialchars($_POST['mail']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $message = htmlspecialchars($_POST['message']);
+    $stmtMessage->execute(array($nom, $prenom, $mail, $phone, $message));
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +28,7 @@
 <body>
 
 <header>
-    <?php
+    <?php #On inclut la navbar
     include ('nav.php');
     ?>
 </header>
@@ -20,8 +39,10 @@
 
     <h1>Contactez-moi !</h1>
 
+    <!--On créé le formulaire de contact-->
+
     <div class="container">
-        <form action="/action_page.php">
+        <form action="contact.php" method="post" id="contactform">
 
             <div>
                 <label for="nom">Nom*</label>
@@ -29,29 +50,28 @@
 
 
                 <label for="prenom">Prénom*</label>
-                <input type="text" id="prenom" name="nom" placeholder="Prénom" required>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
 
                 <label for="mail">Adresse mail</label>
                 <input type="email" id="mail" name="mail" placeholder="Ex : votreadressemail@quelquechose.com">
 
-                <label for="phone">Numéro de téléphone*</label>
-                <input type="tel" id="phone" name="phone" placeholder="Ex : 01 23 45 67 89" required pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ex : 01 23 45 67 89">
             </div>
-
 
             <div>
                 <label for="message">Votre message*</label>
                 <textarea id="message" name="message" placeholder="Écrivez votre message..." required></textarea>
 
                 <p>* Champs obligatoires</p>
-                <input type="submit" value="Envoyer">
+                <input type="submit" value="Envoyer" name="send">
             </div>
         </form>
     </div>
 
 </main>
 
-<?php
+<?php #On inclut le footer
 include ('footer.php');
 ?>
 

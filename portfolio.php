@@ -1,3 +1,11 @@
+<?php
+session_start(); #On start la session
+require_once('db.php'); #On connecte à la base
+
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Cette page n'est pas encore gérée avec la bdd mais le sera prochainement !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+?>
+
 <!DOCTYPE html>
 <html lang="fr" class="height">
 <head>
@@ -10,19 +18,21 @@
 <body class="height">
 
 <header>
-    <?php
+    <?php #On inclut la navbar
     include ('nav.php');
     ?>
 </header>
 
 <main class="row">
 
-    <div class="fond"></div>
+    <div class="fond"></div> <!--On met le fond de l'écran pour qu'il s'affiche parfaitement et qu'on puisse gérer sa transparence sans agir sur le reste-->
 
+    <!--On positionne le titre à gauche de la page-->
     <div id="gaucheport">
         <h1 id="h1port"><strong>Portfolio</strong></h1>
     </div>
 
+    <!--On met le reste à doite, et on met 2 infos importantes-->
     <div id="droiteport">
 
         <div class="contenu">
@@ -44,6 +54,7 @@
             </div>
         </div>
 
+        <!--On fait nos boutons vers les expériences professionnelles et les projets-->
         <div id="colonne">
             <div class="contenu">
                 <button class="button01" type="button" onclick="window.location.href='experiences.php'" target="_blank">Expériences</button>
@@ -55,7 +66,7 @@
     </div>
 </main>
 
-<?php
+<?php #On inclut le footer
 include ('footer.php');
 ?>
 

@@ -1,23 +1,11 @@
 <?php
-//sous-fichier qui permet d'afficher les compétences de chacun
-/*
-    if(!isset($_SESSION['user_name'])) {
-        exit();
-    }
-*/
-header( 'content-type: text/html; charset=utf-8' );
-require_once('db.php');
-/*
-    $user_name = $_SESSION['user_name'];
-    $user_id = $_SESSION['user_id'];*/
-$rqtP = "SELECT * FROM projets";
+session_start(); #On start la session
+require_once('db.php'); #On connecte à la base
 
-try {
-    $stmt = $pdo->prepare($rqtP);
-    $stmt->execute();
-} catch(Exception $e) {
-    $e->getMessage();
-}
+#Requête qui permet de récupérer tous les projets
+$rqtP = "SELECT * FROM projets";
+$stmt = $pdo->prepare($rqtP);
+$stmt->execute();
 ?>
 
 <!DOCTYPE html>
@@ -33,17 +21,18 @@ try {
 <body>
 
 <header>
-    <?php
+    <?php #On inclut la navbar
     include ('nav.php');
     ?>
 </header>
 
 <main>
 
-    <div class="fond"></div>
+    <div class="fond"></div> <!--On met le fond de l'écran pour qu'il s'affiche parfaitement et qu'on puisse gérer sa transparence sans agir sur le reste-->
 
     <h1>Découvrez mes <span>projets</span></h1>
 
+    <!--On affiche tous nos projets (résultats de la requête) dans des cards-->
     <div class="card-deck">
 
 
@@ -64,7 +53,7 @@ try {
 
 </main>
 
-<?php
+<?php #On inclut le footer
 include ('footer.php');
 ?>
 

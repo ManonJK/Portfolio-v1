@@ -1,0 +1,5 @@
+*.sql
+*.ini
+.htaccess
+/assets/comps/logos/*.png
+/assets/exps/*.png

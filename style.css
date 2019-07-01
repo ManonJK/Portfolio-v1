@@ -1,11 +1,6 @@
 /*Des borders seront utilisés pour les vérifications, puis laissés commentés paar la suite*/
+/*On importe la police principale du site de 2 façons différentes : en ligne et depuis les fichiers*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-@media all and (max-width:480px)
-{
-    
-}
-
 @font-face {
     font-family: "Alaska";
     src: url("Alaska_Font.ttf");
@@ -15,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/*On set que le body est par défaut en Montserra et avec tout de centré en colonne*/
 body{
     display: flex;
     flex-direction: column;
@@ -26,6 +22,7 @@ body{
     font-weight: normal;
 }
 
+/*On fait en sorte que le fond du footer soit transparent noir, que tout soit centré dedans et qu'il ait une bonne taille*/
 footer{
     display: flex;
     flex-direction: column;
@@ -36,11 +33,13 @@ footer{
     background-color: rgba(0,0,0,0.5);
 }
 
+/*On enlève les margin du footer*/
 footer p{
     margin: 0;
     color: white;
 }
 
+/*On affiche correctement les form, le texte toujours à gauche*/
 form{
     display: flex;
     flex-direction: row;
@@ -48,6 +47,7 @@ form{
     text-align: left;
 }
 
+/*On met la taille souhaitée pour que ça s'affiche bien*/
 form div{
     display: flex;
     flex-direction: column;
@@ -56,26 +56,31 @@ form div{
     justify-content: center;
 }
 
+/*On définit la taille de la police dans les formulaires ainsi que leur position*/
 form p{
     font-size: 0.8em;
     align-self: flex-end;
 }
 
+/*On fait en sorte que le header (nav) ait une ombre et s'affiche correctement*/
 header {
     display: flex!important;
     width: 100%;
     box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
 }
 
+/*On définit la taille de la police des titres principaux*/
 h1{
     font-weight: normal;
     margin: 30px;
 }
 
+/*On met en majuscule*/
 h1 span{
     text-transform: uppercase;
 }
 
+/*On fait en sorte que nos input soient correctement affichés*/
 input[type=text], input[type=email], input[type=tel], input[type=password] ,select, textarea {
     width: 100%;
     padding: 12px;
@@ -102,6 +107,7 @@ input[type=submit]:hover {
     background-color: #661B2E;
 }
 
+/*On fait en sorte que notre main soit correctement affiché par rapport au body et que tous les éléments soient centrés*/
 main{
     display: flex;
     flex-direction: column;
@@ -112,14 +118,17 @@ main{
     height: 100%;
 }
 
+/*On définit la taille de nos textarea*/
 textarea{
     height: 200px;
 }
 
+/*On aligne les items au centre du parent*/
 #aligncenter{
     align-items: center;
 }
 
+/*Permet d'afficher de façon à ce que les items soient en colonne dans le conteneur parent*/
 #colonne{
     /*border : 1px solid yellow;
     margin-top: 30px;*/
@@ -134,6 +143,7 @@ textarea{
     justify-content: center;
 }
 
+/*Les items à droite de la page portfolio */
 #droiteport{
     padding: 0 20px 0 20px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -144,6 +154,7 @@ textarea{
     align-items: center;
 }
 
+/*Les items à gauche de la page index ont un fond transparent et sont centrés*/
 #gauche{
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
@@ -158,6 +169,7 @@ textarea{
     text-align: center;
 }
 
+/*item à gauche de la page portfolio définis pour être au centre du  conteneur parent*/
 #gaucheport{
     width: 40%;
     height: 100%;
@@ -165,20 +177,26 @@ textarea{
     display: table;
 }
 
+/*titre principal de la page portfolio*/
 #h1port{
     font-weight: normal;
     display: table-cell;
     vertical-align: middle;
 }
 
-#height60{
-    width: 60%;
+/*On met un fond, des margins, et on adoucis les bords du formulaire de contact*/
+#contactform{
+    background-color: rgba(0,0,0,0.5);
+    margin: 5%;
+    border-radius: 5em;
 }
 
+/*On set le texte de la page portfolio à droite*/
 #justifie{
     text-align: right;
 }
 
+/*On set la taille des icones des réseaux ainsi que leur positionnement les uns par rapport aux autres*/
 #mes_reseaux{
     display: flex;
     flex-direction: row;
@@ -197,6 +215,7 @@ textarea{
     /*text-transform: uppercase;*/
 }
 
+/*On défini l'affichage du texte de la page à propos*/
 #textepropos{
     display: flex;
     flex-direction: column;
@@ -204,6 +223,7 @@ textarea{
     align-items: flex-start;
 }
 
+/*On enlève les margins du titre principal de la page à propos*/
 #textepropos h1{
     margin: 0;
 }
@@ -214,16 +234,22 @@ textarea{
     padding: 20px;
 }
 
+/*On met la couleur de fond transparente blanche*/
 .bg {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+/*On refait pareil mais en ajoutant un padding et un border radius pour les éléments de la page à propos*/
 .bgwhite{
     background-color: rgba(255,255,255, 0.5);
     padding: 40px;
     border-radius: 20px;
 }
 
+/*On fait en sorte que notre bouton ait un léger dégradé linaire,
+que la souris soit en pointeur dessus,
+que la police soit Rubik,
+qu'il y ait une ombre*/
 .button01 {
     margin: 0px 40px 0px 40px;
     display: inline-block;
@@ -255,6 +281,8 @@ textarea{
     background-clip: border-box;
 }
 
+/*On affiche nos catégories de compétences en colonnes, en les espaçant de 100px entre chaque (50px + 50px)
+et on ajoute le space-between pour que les éléments contenus soient automatiquement espacés*/
 .categoriecomp{
     padding: 50px 0;
     margin: 0;
@@ -265,6 +293,7 @@ textarea{
     width: 100%;
 }
 
+/*Ici on va définir les propriétés de nos cardds pour les pages projets et expériences professionnelles*/
 .card{
     width: 277px;
     height: fit-content;
@@ -295,12 +324,14 @@ textarea{
     border-bottom: 1px solid darkgray;
 }
 
+/*On affiche bien le texte de notre bouton pour afficher le mdp de la connexion admin*/
 .check{
     color: black;
     margin: 0;
     justify-content: center!important;
 }
 
+/*On fait en sorte que le conteneur affiche les éléments enfants en colonne*/
 .colonne{
     display: flex;
     flex-direction: column;
@@ -309,6 +340,7 @@ textarea{
     justify-content: center;
 }
 
+/**On fait en sorte que le conteneur affiche les éléments enfants en ligne*/
 .contenu{
     display: flex;
     flex-direction: row;
@@ -317,6 +349,7 @@ textarea{
     align-items: center;
 }
 
+/*On set la taille des images pour qu'elle soit adaptée*/
 .contenu img{
     width: 25%;
     height: auto;
@@ -329,6 +362,7 @@ textarea{
     width: 100%;
 }
 
+/*On définit la couleur et les marges de chaque icône de réseau social*/
 .fab{
     color: #B02E4E;
     margin: 0 10px;
@@ -338,6 +372,8 @@ textarea{
     color: #661B2E;
 }
 
+/*On définit les propriété de la div fond qui est sur chaque page :
+on veut qu'elle prenne tout l'écran, sans rien gêner*/
 .fond{
     background-image: url("images/fond.jpg");
     background-size: cover;
@@ -350,20 +386,31 @@ textarea{
     min-height: 100%;
 }
 
+/*On définit la largeur à 60% de la page*/
+.height60{
+    width: 60%;
+}
+
+/*On définit la hauteur de l'élément à 100% de son parent :
+sert à débugger certaines pages*/
 .height{
     height: 100%;
 }
 
+/*On applique un padding de 20px (et non pas une margin finalement)*/
 .margin20{
     padding-bottom: 20px;
     flex-grow: 7;
 }
 
+/*On définit la taille des images dans un conteneur précis*/
 .margin20 img{
     width: 200px;
     border-radius : 50%;
 }
 
+/*On définit l'affichage des boutons de la page à propos :
+en ligne, et espacés*/
 .mes_boutons{
     display: flex;
     flex-direction: row;
@@ -371,6 +418,7 @@ textarea{
     justify-content: space-around;
 }
 
+/*On fait en sorte que les compétences soient en ligne et espacés*/
 .mescompenligne{
     display: flex;
     flex-direction: row;
@@ -378,6 +426,7 @@ textarea{
     width: 100%;
 }
 
+/*On aligne le texte en colonne à gauche de son élément parent*/
 .montexte{
     display: flex;
     flex-direction: column;
@@ -386,6 +435,7 @@ textarea{
     text-align: start;
 }
 
+/*On set la taille des div compétences ainsi que leur couleur*/
 .mycompetences{
     display: flex;
     flex-direction: column;
@@ -396,11 +446,13 @@ textarea{
     align-items: center;
 }
 
+/*On ajoute la couleur au survol de la souris*/
 .mycompetences:hover{
     transform: scale(1.3);
     filter: grayscale(0%);
 }
 
+/*On set la taille des images compétences*/
 .mycompetences img{
     height: 200px;
     width: auto;
@@ -408,16 +460,26 @@ textarea{
     border-style: none;
 }
 
+/*On définit le conteneur parent comme affichant ses enfants en ligne*/
 .row{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
+/*Idem, a servi pour un test*/
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*On définit la taille d'un conteneur à 50% de son élément parent*/
 .taille50{
     width: 50%;
 }
 
+/*On fait en sorte que l'image prenne toute la taille de son parent*/
 .taille50 img{
     width: 100%;
 }

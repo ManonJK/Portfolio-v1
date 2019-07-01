@@ -1,23 +1,12 @@
 <?php
-//sous-fichier qui permet d'afficher les compétences de chacun
-/*
-    if(!isset($_SESSION['user_name'])) {
-        exit();
-    }
-*/
-header( 'content-type: text/html; charset=utf-8' );
-require_once('db.php');
-/*
-    $user_name = $_SESSION['user_name'];
-    $user_id = $_SESSION['user_id'];*/
-$rqtP = "SELECT * FROM experiences_pro";
+session_start(); #On start la session
+require_once('db.php');#On lie avec la bdd
 
-try {
-    $stmt = $pdo->prepare($rqtP);
-    $stmt->execute();
-} catch(Exception $e) {
-    $e->getMessage();
-}
+#Requête qui nous permet de récupérer toutes nos expériences professionnelles
+$rqtP = "SELECT * FROM experiences_pro";
+$stmt = $pdo->prepare($rqtP);
+$stmt->execute();
+
 ?>
 
 
@@ -33,14 +22,14 @@ try {
 <body>
 
 <header>
-    <?php
+    <?php #On inclut la navbar
     include ('nav.php');
     ?>
 </header>
 
 <main>
 
-    <div class="fond"></div>
+    <div class="fond"></div> <!--On met le fond de l'écran pour qu'il s'affiche parfaitement et qu'on puisse gérer sa transparence sans agir sur le reste-->
 
     <div>
         <h1>Découvrez mes expériences</h1>
@@ -48,7 +37,7 @@ try {
 
     <div class="bg taille50">
 
-        <?php
+        <?php #On affiche toutes nos expériences dans des cards
             while($c = $stmt->fetch(PDO::FETCH_ASSOC)){
                 echo "<div class='contenu'>";
                 echo "<div class='taille50'>";
@@ -66,7 +55,7 @@ try {
     </div>
 </main>
 
-<?php
+<?php #On inclut le footer
 include ('footer.php');
 ?>
 
