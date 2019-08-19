@@ -6,11 +6,16 @@
     src: url("Alaska_Font.ttf");
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url("Montserrat-Regular.ttf");
+}
+
 * {
     box-sizing: border-box;
 }
 
-/*On set que le body est par défaut en Montserra et avec tout de centré en colonne*/
+/*On set le body par défaut en Montserrat et avec tout de centré en colonne*/
 body{
     display: flex;
     flex-direction: column;
@@ -31,6 +36,8 @@ footer{
     justify-content: center;
     padding: 20px 0;
     background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    bottom: 0;
 }
 
 /*On enlève les margin du footer*/
@@ -362,6 +369,14 @@ et on ajoute le space-between pour que les éléments contenus soient automatiqu
     width: 100%;
 }
 
+.div_modal {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*On définit la couleur et les marges de chaque icône de réseau social*/
 .fab{
     color: #B02E4E;
@@ -395,6 +410,21 @@ on veut qu'elle prenne tout l'écran, sans rien gêner*/
 sert à débugger certaines pages*/
 .height{
     height: 100%;
+}
+
+/*On définit l'affichage des images qui vont correspondre à des modaux*/
+.img_modal {
+    height: 200px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.img_modal img{
+    height: 200px;
+    width: auto;
+    cursor: pointer;
 }
 
 /*On applique un padding de 20px (et non pas une margin finalement)*/

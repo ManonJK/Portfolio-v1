@@ -27,7 +27,7 @@ else{
 
     <main>
         <h1>Gérer les projets</h1>
-
+        <!-- On supprime un projet -->
         <div class="suppcomp">
             <h2>Supprimer un projet</h2>
             <form method="post" class="row" action="projAdmin.php">
@@ -38,7 +38,7 @@ else{
                         $rqt->execute();
                         while($c = $rqt->fetch()){
                             $valueComp = $c['id_projet'];
-                            $nomComp = $c['titre'];
+                            $nomComp = $c['libelle'];
                             echo "<option value='$valueComp'>$nomComp";
                         }
                         ?>
@@ -51,7 +51,7 @@ else{
             }
             ?>
         </div>
-
+        <!-- On modifie un projet -->
         <div class="modifcomp">
             <h2>Modifier un projet</h2>
             <form action="projAdmin.php" method="post" enctype="multipart/form-data">
@@ -64,7 +64,7 @@ else{
                             $rqt->execute();
                             while($c = $rqt->fetch()){
                                 $valueComp = $c['id_projet'];
-                                $nomComp = $c['titre'];
+                                $nomComp = $c['libelle'];
                                 echo "<option value='$valueComp'>$nomComp";
                             }
                             ?>
@@ -87,6 +87,11 @@ else{
                 </div>
 
                 <div>
+                    <p>Nouveau nom modal :</p>
+                    <textarea maxlength="50" name="modifCompModal"></textarea>
+                </div>
+
+                <div>
                     <p>Nouveau contenu :</p>
                     <textarea maxlength="3000" name="modifCompType"></textarea>
                 </div>
@@ -99,7 +104,7 @@ else{
             }
             ?>
         </div>
-
+        <!-- On ajoute un projet -->
         <div class="ajoutcomp">
             <h2>Ajouter un projet</h2>
             <form method="post" action="projAdmin.php" enctype="multipart/form-data">
@@ -121,6 +126,11 @@ else{
                 </div>
 
                 <div>
+                    <p>Nouveau nom modal :</p>
+                    <textarea maxlength="50" name="AddCompModal"></textarea>
+                </div>
+
+                <div>
                     <p>Alt :</p>
                     <textarea maxlength="50" name="AddCompAlt"></textarea>
                 </div>
@@ -129,9 +139,9 @@ else{
             </form>
             <div class="message">
                 <?php
-                    if(isset($messageAdd)){
-                        echo($messageAdd);
-                    }
+                if(isset($messageAdd)){
+                    echo($messageAdd);
+                }
                 ?>
             </div>
         </div>

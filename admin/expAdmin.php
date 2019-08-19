@@ -28,6 +28,7 @@ else{
     <main>
         <h1>Gérer les expériences</h1>
 
+        <!-- On supprime une expérience -->
         <div class="suppcomp">
             <h2>Supprimer une expérience</h2>
             <form method="post" class="row" action="expAdmin.php">
@@ -38,7 +39,7 @@ else{
                         $rqt->execute();
                         while($c = $rqt->fetch()){
                             $valueComp = $c['id_exp'];
-                            $nomComp = $c['titre'];
+                            $nomComp = $c['libelle'];
                             echo "<option value='$valueComp'>$nomComp";
                         }
                         ?>
@@ -51,7 +52,7 @@ else{
             }
             ?>
         </div>
-
+        <!-- On modifie une expérience -->
         <div class="modifcomp">
             <h2>Modifier une expérience</h2>
             <form action="expAdmin.php" method="post" enctype="multipart/form-data">
@@ -64,7 +65,7 @@ else{
                             $rqt->execute();
                             while($c = $rqt->fetch()){
                                 $valueComp = $c['id_exp'];
-                                $nomComp = $c['titre'];
+                                $nomComp = $c['libelle'];
                                 echo "<option value='$valueComp'>$nomComp";
                             }
                             ?>
@@ -87,8 +88,25 @@ else{
                 </div>
 
                 <div>
+                    <p>Nouveau nom modal :</p>
+                    <textarea maxlength="50" name="modifCompModal"></textarea>
+                </div>
+
+                <div>
                     <p>Nouveau contenu :</p>
                     <textarea maxlength="3000" name="modifCompType"></textarea>
+                </div>
+
+
+                <div>
+                    <p>Nouveau fichier à charger :</p>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="120000000" />
+                    <input type="file" name="modifCompFile" accept="application/pdf">
+                </div>
+
+                <div>
+                    <p>Nouveau titre du fichier :</p>
+                    <textarea maxlength="50" name="modifCompFileTitle"></textarea>
                 </div>
 
                 <div><input type="submit" value="Valider les changements" name="submitModComp"></div>
@@ -99,9 +117,9 @@ else{
             }
             ?>
         </div>
-
+        <!-- On ajoute une expérience -->
         <div class="ajoutcomp">
-            <h2>Ajouter une expériencce</h2>
+            <h2>Ajouter une expérience</h2>
             <form method="post" action="expAdmin.php" enctype="multipart/form-data">
 
                 <div>
@@ -121,11 +139,27 @@ else{
                 </div>
 
                 <div>
+                    <p>Nouveau nom modal :</p>
+                    <textarea maxlength="50" name="AddCompModal"></textarea>
+                </div>
+
+                <div>
                     <p>Alt :</p>
                     <textarea maxlength="50" name="AddCompAlt"></textarea>
                 </div>
 
-                <input type="submit" value="Ajouter l'expérience professionnelle" name="submitAddComp">
+                <div>
+                    <p>Sélectionner un fichier à charger :</p>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="120000000" />
+                    <input type="file" name="AddCompFile" accept="application/pdf">
+                </div>
+
+                <div>
+                    <p>Titre du fichier :</p>
+                    <textarea maxlength="50" name="AddCompFileTitle"></textarea>
+                </div>
+
+                <input type="submit" value="Ajouter l'expérience" name="submitAddComp">
             </form>
             <div class="message">
                 <?php

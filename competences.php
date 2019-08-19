@@ -58,7 +58,7 @@ $stmt3->execute();
     <div class="categoriecomp">
         <h2>Développement Logiciel</h2>
         <div class="mescompenligne">
-            <?php #On affcihe les compétences de la seconde requête
+            <?php #On affiche les compétences de la seconde requête
             while($c = $stmt2->fetch(PDO::FETCH_ASSOC)) {
                 echo "<div class='mycompetences'>";
                 echo "<h3>" . $c['libelle'] . "</h3>";
