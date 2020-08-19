@@ -34,7 +34,7 @@ require_once('db.php'); #On connecte à la base
                 <img src="images/photo.jpg" alt="Photo de moi"/>
             </div>
             <div class="mes_boutons">
-                <button class="button01" type="button" onclick="window.location.href='competences.php'" target="_blank">Compétences</button>
+                <button class="button01" type="button" onclick="window.location.href='competences.php'">Compétences</button>
             </div>
         </div>
 
@@ -43,7 +43,7 @@ require_once('db.php'); #On connecte à la base
             <!--Affichage de la présentation-->
             <div id="textepropos" class="margin20">
                 <h1>Découvrez qui je suis</h1>
-                <p>Etudiante en première année d'informatique à Ynov Aix-en-Provence, je suis
+                <p>Etudiante en deuxième année d'informatique à Ynov Aix-en-Provence, je suis
                     spécialisée dans le développement Web.
                     Mes passions en terme de fiction, de pâtisserie, et d'exploration sous-marine
                     font de moi une personne <strong>curieuse, intéressée, motivée</strong>,
@@ -53,8 +53,8 @@ require_once('db.php'); #On connecte à la base
 
             <!--Affichage des boutons Portfolio et CV-->
             <div class="mes_boutons">
-                <button class="button01" type="button" onclick="window.location.href='portfolio.php'" target="_blank">Portfolio</button>
-                <button class="button01" type="button" onclick="window.location.href='CV_FR.pdf'" target="_blank">CV</button>
+                <button class="button01" type="button" onclick="window.location.href='experiences.php'">Expériences</button>
+                <button class="button01" type="button" onclick="window.location.href='CV_FR.pdf'">CV</button>
             </div>
         </div>
 

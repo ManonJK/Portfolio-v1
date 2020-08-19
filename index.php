@@ -34,8 +34,8 @@ require_once('db.php'); #On connecte à la base
 
             <!--On fait les liens de nos boutons vers les pages à rpopos et portfolio-->
             <div>
-                <button class="button01" type="button" onclick="window.location.href='propos.php'" target="_blank">A propos</button>
-                <button class="button01" type="button" onclick="window.location.href='portfolio.php'" target="_blank">Portfolio</button>
+                <button class="button01" type="button" onclick="window.location.href='propos.php'">A propos</button>
+                <button class="button01" type="button" onclick="window.location.href='experiences.php'">Expériences</button>
             </div>
         </div>
     </div>

@@ -52,7 +52,17 @@ $stmtM->execute();
             <?php
             while($c = $stmt->fetch(PDO::FETCH_ASSOC)){
                 echo "<div class='img_modal'>";
+                echo "<div class='page'>";
+                echo "<div class='page_demo'>";
+                echo "<div class='page__container'>";
+                echo "<div class='photobox photobox_type10' data-toggle='modal' data-target='" . $c['data_target'] . "'>";
+                echo "<div class='photobox__previewbox'>";
                 echo "<img src='" . $c['logo'] . "' alt='" . $c['alt'] . "' data-toggle='modal' data-target='" . $c['data_target'] . "'/>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
                 echo "</div>";
             }
             ?>
@@ -60,7 +70,7 @@ $stmtM->execute();
 
 
 
-        <!-- On affiche le modal de la compétence-->
+        <!-- On affiche le modal de l'expérience-->
         <?php
         while($c = $stmtM->fetch(PDO::FETCH_ASSOC)){
             echo "<div class='modal fade' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true' id='" .  $c['id_mod'] ."'>";

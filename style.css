@@ -163,7 +163,7 @@ textarea{
 
 /*Les items à gauche de la page index ont un fond transparent et sont centrés*/
 #gauche{
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -248,7 +248,7 @@ textarea{
 
 /*On refait pareil mais en ajoutant un padding et un border radius pour les éléments de la page à propos*/
 .bgwhite{
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.8);
     padding: 40px;
     border-radius: 20px;
 }
@@ -258,9 +258,16 @@ que la souris soit en pointeur dessus,
 que la police soit Rubik,
 qu'il y ait une ombre*/
 .button01 {
+
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, black, #303030);
+    border: 2px solid black;
+    color: black;
+    box-shadow: none;
+    background-clip: border-box;
+
     margin: 0px 40px 0px 40px;
     display: inline-block;
-    color: #fff;
+
     letter-spacing: 0px;
     font-family: "Rubik", sans-serif;
     font-weight: 500;
@@ -271,21 +278,18 @@ qu'il y ait une ombre*/
     text-transform: uppercase;
     border-radius: 5px;
     background-origin: border-box;
-    background-clip: content-box, border-box;
-    background-image: linear-gradient(to right, black 0%, #303030 100%), radial-gradient(circle at top left, black, #303030);
-    border: double 2px transparent;
-    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+
     transition: all 0.3s ease-in-out;
     width: 120px;
     height: 55px;
+
 }
 
 .button01:hover {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, black, #303030);
-    border: 2px solid black;
-    color: black;
-    box-shadow: none;
-    background-clip: border-box;
+    color: #fff;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(to right, black 0%, #303030 100%), radial-gradient(circle at top left, black, #303030);
+    border: double 2px transparent;
 }
 
 /*On affiche nos catégories de compétences en colonnes, en les espaçant de 100px entre chaque (50px + 50px)
@@ -300,7 +304,12 @@ et on ajoute le space-between pour que les éléments contenus soient automatiqu
     width: 100%;
 }
 
-/*Ici on va définir les propriétés de nos cardds pour les pages projets et expériences professionnelles*/
+.categoriecomp.bgwhite{
+    border-radius: 0;
+    margin: 30px;
+}
+
+/*Ici on va définir les propriétés de nos cards pour les pages projets et expériences professionnelles*/
 .card{
     width: 277px;
     height: fit-content;
@@ -379,12 +388,13 @@ et on ajoute le space-between pour que les éléments contenus soient automatiqu
 
 /*On définit la couleur et les marges de chaque icône de réseau social*/
 .fab{
-    color: #B02E4E;
+    color: #4E778F;
     margin: 0 10px;
+    transition: all 0.3s ease-out;
 }
 
 .fab:hover{
-    color: #661B2E;
+    color: #303D45;
 }
 
 /*On définit les propriété de la div fond qui est sur chaque page :
@@ -569,7 +579,7 @@ a{
 }
 
 a:hover{
-    color: #B02E4E;
+    color: #3E5869;
     text-decoration: none;
 }
 
@@ -598,6 +608,12 @@ ul{
     margin-top: 1rem;
 }
 
+#gauchenav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #gauchenav a{
     /*border: 2px solid red;*/
     color: #333;
@@ -606,7 +622,7 @@ ul{
 }
 
 #gauchenav span{
-    color: #B02E4E;
+    color: #4E778F;
 }
 
 #liste-menu{
@@ -620,4 +636,112 @@ ul{
 #sticky{
     display: flex;
     margin: 20px 20px 0 20px;
+}
+
+/*Ici le css pour l'animation sur les images des modaux*/
+
+
+/*
+* The function calc is working wrong in case calculations in the Firefox
+*/
+
+.photobox{
+    display: inline-block;
+}
+
+.photobox__previewbox{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.photobox__preview{
+    display: block;
+    max-width: 100%;
+}
+
+.photobox__previewbox:before{
+    content: "";
+}
+
+/* type 10 */
+
+.photobox_type10 .photobox__previewbox:before{
+    width: 0;
+    height: 0;
+    padding: 25%;
+
+    background-color: var(--photoboxOverlay, rgba(0, 0, 0, .8));
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transition: transform calc(var(--photoboxAnimationDuration, .8s) / 2) ease;
+    will-change: transform;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.photobox_type10:hover .photobox__previewbox:before{
+    transform: translate(-50%, -50%) scale(4);
+    transition-duration: var(--photoboxAnimationDuration, .8s);
+}
+
+.photobox_type10 .photobox__label{
+    width: 95%;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity calc(var(--photoboxAnimationDuration, .8s) / 4) cubic-bezier(0.71, 0.05, 0.29, 0.9), transform calc(var(--photoboxAnimationDuration, .8s) / 4) cubic-bezier(0.71, 0.05, 0.29, 0.9);
+    will-change: opacity, transform;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    z-index: 3;
+}
+
+.photobox_type10:hover .photobox__label{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition-duration: calc(var(--photoboxAnimationDuration, .8s) / 2);
+    transition-delay: calc(var(--photoboxAnimationDuration, .8s) / 4);
+}
+
+/*
+* demo styles for photobox
+*/
+
+.photobox{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    --photoboxOverlay: rgba(0, 0, 0, .4);
+    /*--photoboxAnimationDuration: .5s;*/
+}
+
+@media screen and (max-width: 480px){
+    .photobox{
+        width: 100%;
+    }
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+.page{
+    flex-grow: 1;
+    order: 1;
+}
+
+.page__container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
